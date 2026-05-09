@@ -10,16 +10,16 @@ int main()
     cin.ignore() ;
     string line;
     getline(cin, line);
-    stringstream ss(line);
+    stringstream aa(line);
     vector<int> input ;
     int box ;
     int set[n] = {};
-    while(ss >> box)
+    while(aa >> box)
     {
         input.push_back(box) ;
     }
     int i = 0 ;
-    int result = 0;
+    int result = 0 ;
     for(int a = 0 ; a < n  ; a ++)
     {
         if(input[i] > input[i+1])
@@ -37,7 +37,7 @@ int main()
         if (n > 1)
         {
             cout <<set[a] << " + " ;
-        } 
+        }
     }
     if(n == 1)
     cout << set[0] ;
