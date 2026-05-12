@@ -2,14 +2,14 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "run cpp",
+      "label": "Build and Run Raylib",
       "type": "shell",
-      "command": "g++ ${file} -o ${fileDirname}/run && ${fileDirname}/run",
+      "command": "g++ '${file}' -o '${fileBasenameNoExtension}' -L/usr/local/lib -lraylib -lGL -lm -lpthread -ldl -lrt -lX11 && './${fileBasenameNoExtension}'",
       "group": {
         "kind": "build",
         "isDefault": true
       },
-      "problemMatcher" : []
+      "problemMatcher": ["$gcc"]
     }
   ]
 }
